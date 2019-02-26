@@ -12,7 +12,7 @@ if not os.path.exists(base_path):
 	os.makedir(base_path)
 
 #date and time of interest
-search_time = '2018-01-01 13:00'
+search_time = '2013-10-28 12:00'
 search_time = datetime.datetime.strptime(search_time, '%Y-%m-%d %H:%M')
 
 #path to where the files to be kept - checks if they are there - if not then downloads them
