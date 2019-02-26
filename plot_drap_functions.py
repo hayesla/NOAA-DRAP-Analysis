@@ -41,6 +41,7 @@ def get_data(date, filepath = '/Users/laurahayes/Documents/drap'):
 	else:
 		print ('didn\' download')
 
+	return os.path.join(filepath, file)
 
 
 def read_global_files(file_path):
