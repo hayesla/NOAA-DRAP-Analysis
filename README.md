@@ -1,7 +1,7 @@
 # Plot NOAA D-RAP 
 
  Python Code for Plotting the NOAA D-Region Absorption Prediction (D-RAP) Product 
- See more here on [NOAA site] (https://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap)
+ See more here on [NOAA site](https://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap)
  
  The code to download and plot the D-RAP model at a certain time is given in *download_and_plot_drap.py*
  
