@@ -104,7 +104,7 @@ def read_global_files(file_path):
 
 
 
-def plot_global_map(lats, lons, full_map, save_plot = None, title = 'DRAP Model'):
+def plot_global_map(lats, lons, full_map, title="DRAP Model", save_plot=None,):
 	'''
 	function to plot map after txt global file read
 
@@ -125,23 +125,28 @@ def plot_global_map(lats, lons, full_map, save_plot = None, title = 'DRAP Model'
 	'''
 
 	fig=plt.figure()
-	m = Basemap(projection = 'cyl', llcrnrlat=-89,urcrnrlat=89, llcrnrlon=-178,urcrnrlon=178, resolution = 'l')
+	m = Basemap(projection='cyl', 
+				llcrnrlat=-89,urcrnrlat=89, 
+				llcrnrlon=-178,urcrnrlon=178, 
+				resolution='l')
 
 	levels = np.arange(0, 35,0.1)
-	#CS1 = m.contour(lons,lats,full_map,levels,linewidths=0.5,colors='k',latlon=True)
-	CS2 = m.contourf(lons,lats,full_map,levels,cmap='afmhot_r', extend='both',latlon=True)
-	cbar = m.colorbar(CS2,location = 'bottom') 
+	CS2 = m.contourf(lons,lats,full_map,levels,cmap='magma_r', extend='both',latlon=True)
+	cbar = m.colorbar(CS2,location = 'right') 
 	cbar.set_label('Degraded Frequency (MHz)')
 	cbar.set_ticks([0, 5, 10, 15, 20, 25, 30])
+
+	# plt.xlim(-30, 50)
+	# plt.ylim(35, 77)
+
 	m.drawcoastlines()
 	m.drawmapboundary()
 
-	m.drawparallels(np.linspace(-90, 90, 25), linewidth = 0.5, labels = [1,0,0,0])
-	m.drawmeridians(np.linspace(-180, 180, 25), linewidth = 0.5, labels = [0,0,0,1])
+	m.drawparallels(np.linspace(-90, 90, 10), linewidth = 0.5, labels = [1,0,0,0])
+	m.drawmeridians(np.linspace(-180, 180, 10), linewidth = 0.5, labels = [0,0,0,1])
 
-	plt.xlim(-30, 50)
+	# plt.xlim(20, 100)
 
-	plt.ylim(35, 77)
 	plt.title(title)
 	plt.tight_layout()
 	
