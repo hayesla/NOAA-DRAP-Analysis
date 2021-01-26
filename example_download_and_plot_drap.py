@@ -46,7 +46,7 @@ global_file = 'SWX_DRAP20_C_SWPC_'+search_time.strftime('%Y%m%d%H%M%S')+'_GLOBAL
 lat, lon, full_map = read_global_files(os.path.join(path_to_files, global_file))
 
 #plot the global map and save as 'example.png'
-plot_global_map(lat, lon, full_map, title =  'DRAP Model '+search_time.strftime('%Y-%m-%d %H:%M') + 'UT', save_plot = 'example2')
+plot_global_map(lat, lon, full_map, title='NOAA D-RAP Model '+search_time.strftime('%Y-%m-%d %H:%M') + 'UT', save_plot = 'example')
 
 
 
