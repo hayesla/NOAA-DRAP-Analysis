@@ -1,4 +1,4 @@
-# Plot NOAA D-RAP 
+# Python scripts to download, read and plot the NOAA D-Region Absorption Prediction (D-RAP) Product 
 
  Python Code for Plotting the NOAA D-Region Absorption Prediction (D-RAP) Product 
  See more here on [NOAA site](https://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap)
@@ -12,7 +12,7 @@
  
 ```
  
- The output at moment will show the D-RAP model over Europe. The degraded frequency map is the highest frequency affected by absorption of 1dB cause by solar activity (flares) affecting the D-region of the ionosphere
+ The output at moment will show the D-RAP model over the globe. The degraded frequency map is the highest frequency affected by absorption of 1dB cause by solar activity (flares) affecting the D-region of the ionosphere.
  
  ![alt text](example.png)
  
